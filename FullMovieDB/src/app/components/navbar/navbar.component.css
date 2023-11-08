@@ -9,10 +9,19 @@
 }
 
 h5{
-    padding-left: 67px;
+    padding-left: 63px;
 }
 
 nav{
 
     padding-left: 100px;
+}
+
+hr{
+    width: 150%;
+}
+
+.logout{
+    margin-top: 180px;
+    padding-right: 25px;
 }
