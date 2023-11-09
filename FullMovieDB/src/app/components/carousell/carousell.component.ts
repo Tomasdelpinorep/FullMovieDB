@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbCarouselConfig, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
-import { PopularMovie } from 'src/app/models/popular-movie-list';
-import { TrendingMovie, TrendingMoviesResponse } from 'src/app/models/trending-movies';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { TrendingMovie } from 'src/app/models/trending-movies';
 import { MovieService } from 'src/app/services/movie-service.service';
+import { environment } from 'src/environments/environment'; 
 
 @Component({
   selector: 'app-carousell',
@@ -11,10 +11,9 @@ import { MovieService } from 'src/app/services/movie-service.service';
 })
 export class CarousellComponent implements OnInit{
 	currentPage = 1;
-	movieList: PopularMovie[] = [];
+	trendingMovieBackDrops:String[] = [];
 	showNavigationArrows = true;
 	showNavigationIndicators = false;
-	images = [1055, 194, 368].map((n) => `https://picsum.photos/id/${n}/900/500`);
 
 	constructor(config: NgbCarouselConfig, private movieService :MovieService) {
 		config.showNavigationArrows = true;
@@ -22,15 +21,16 @@ export class CarousellComponent implements OnInit{
 	}
 
 	ngOnInit(): void {
-		this.movieService.getPopularMoviesList(this.currentPage).subscribe(resp => {
-			this.movieList = resp.results;
-
+		this.movieService.getTrendingMoviesList().subscribe(resp => {
+			this.trendingMovieBackDrops = this.getTrendingMoviesBackDrops(resp.results);
 		})
 	}
 
-	getFeaturedMoviesPosterPath(trendingMovieList: TrendingMovie[]){
-		for const m of trendingMovieList{
-			
+	getTrendingMoviesBackDrops(trendingMovieList: TrendingMovie[]){
+		var trendingBackDrops = [];
+		for (const m of trendingMovieList){
+				
 		}
+		return trendingBackDrops;
 	}
 }
