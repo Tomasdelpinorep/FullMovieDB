@@ -1,5 +1,9 @@
 div{
-    margin-left: 180px;
+    margin-left: 130px;
+}
+
+ul{
+    width: 82%;
 }
 
 .pelis{
@@ -7,5 +11,6 @@ div{
 }
 
 h4{
-    margin-left: 207px;
+    margin-left: 160px;
 }
+
