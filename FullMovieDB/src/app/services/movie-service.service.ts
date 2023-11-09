@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { PopularMoviesResponse } from '../models/top-rated-list';
+import { MovieListResponse } from '../models/movie-list.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +10,14 @@ import { PopularMoviesResponse } from '../models/top-rated-list';
 export class MovieService {
   constructor(private http: HttpClient) {}
 
-  getPopularMoviesList(page: number): Observable<PopularMoviesResponse> {
-    return this.http.get<PopularMoviesResponse>(
-      `https://api.themoviedb.org/3/movie/popular?page=${page}&api_key=fba6287e1b5585e45727ead4703af755`
-    );
+  getPopularMoviesList(): Observable<MovieListResponse> {
+    return this.http.get<MovieListResponse>
+    ('https://api.themoviedb.org/3/movie/popular?api_key=fba6287e1b5585e45727ead4703af755');
   }
+
+  getUpcomingMoviesList(): Observable<MovieListResponse>{
+    return this.http.get<MovieListResponse>
+    ('https://api.themoviedb.org/3/movie/upcoming?api_key=02bd87fa25457bdbc212118905ab3ec0');
+  }
+
 }
