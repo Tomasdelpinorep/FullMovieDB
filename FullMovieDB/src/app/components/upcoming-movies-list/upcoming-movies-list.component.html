@@ -1,6 +1,12 @@
-<h4 class="fw-bold mt-3" style="color: #9EFF00"> UPCOMING </h4>
-<div class="col-12 align-items-center p-3">
-  <ul class="col-2 list-group list-group-horizontal overflow-auto position-relative">
-    <app-movie-item class="mt-2 ms-4 pelis" *ngFor="let m of upcomingList" [movie]="m"></app-movie-item>
-  </ul>
+<div class="row justify-content-center">
+  <div class="col-10">
+    <h4 class="fw-bold mt-3 d-inline" style="color: #9eff00">UPCOMING</h4>
+    <ul class="list-group list-group-horizontal overflow-auto">
+      <app-movie-item
+        class="mt-2 pelis me-3"
+        *ngFor="let m of upcomingList"
+        [movie]="m"
+      ></app-movie-item>
+    </ul>
+  </div>
 </div>
