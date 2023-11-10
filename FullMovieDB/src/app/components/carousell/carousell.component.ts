@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { TrendingMovie } from 'src/app/models/trending-movies';
 import { MovieService } from 'src/app/services/movie-service.service';
@@ -10,27 +10,40 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./carousell.component.css']
 })
 export class CarousellComponent implements OnInit{
+	currentSlide = 0;
 	currentPage = 1;
 	trendingMovieBackDrops:String[] = [];
+	trendingMovieList:TrendingMovie[] = [];
 	showNavigationArrows = true;
 	showNavigationIndicators = false;
 
 	constructor(config: NgbCarouselConfig, private movieService :MovieService) {
 		config.showNavigationArrows = true;
 		config.showNavigationIndicators = true;
+		config.interval = 0;
 	}
 
 	ngOnInit(): void {
 		this.movieService.getTrendingMoviesList().subscribe(resp => {
-			this.trendingMovieBackDrops = this.getTrendingMoviesBackDrops(resp.results);
+			this.trendingMovieList = resp.results;
+			this.trendingMovieBackDrops = this.getTrendingMoviesBackDrops(this.trendingMovieList);
 		})
 	}
 
 	getTrendingMoviesBackDrops(trendingMovieList: TrendingMovie[]){
 		var trendingBackDrops = [];
 		for (const m of trendingMovieList){
-				
+				trendingBackDrops.push(environment.originalPng.concat(m.backdrop_path));
 		}
 		return trendingBackDrops;
+	}
+
+	onSlideChange(event:any){
+		this.currentSlide = this.getCurrentSlideNumber(event.current);
+		return this.currentSlide;
+	}
+
+	getCurrentSlideNumber(slideString:String){
+		return Number(slideString.split('-').reverse()[0]);
 	}
 }
