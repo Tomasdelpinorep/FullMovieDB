@@ -11,6 +11,7 @@ import { UpcomingMoviesListComponent } from './components/upcoming-movies-list/u
 import { MovieItemComponent } from './components/movie-item/movie-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PopularMoviesListComponent } from './components/popular-movies-list/popular-movies-list.component';
+import { UserDetailsComponent } from './ui/user-details/user-details.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { PopularMoviesListComponent } from './components/popular-movies-list/pop
     UpcomingMoviesListComponent,
     MovieItemComponent,
     PopularMoviesListComponent,
+    UserDetailsComponent,
     
   ],
   imports: [
