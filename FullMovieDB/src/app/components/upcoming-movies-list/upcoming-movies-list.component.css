@@ -1,11 +1,13 @@
 div{
-    margin-left: 180px;
-}
-
-.pelis{
-    width: 200px;
+    margin-left: 20%;
 }
 
 h4{
-    margin-left: 207px;
+    margin-left: 100px;
+}
+
+ul{
+
+    margin-left: 85px;
+    width: 60%;
 }
