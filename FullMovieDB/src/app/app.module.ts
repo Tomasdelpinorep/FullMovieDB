@@ -12,7 +12,6 @@ import { MovieItemComponent } from './components/movie-item/movie-item.component
 import { HttpClientModule } from '@angular/common/http';
 import { PopularMoviesListComponent } from './components/popular-movies-list/popular-movies-list.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
