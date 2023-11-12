@@ -1,14 +1,9 @@
 ul{
-    width: 76%;
-    margin-left: 280px;
+    width: 100%;
 }
 
 .pelis{
     width: 200px;
-}
-
-h4{
-    margin-left: 320px;
 }
 
 /* Este estilo es para Chrome, en Firefox no va*/
@@ -27,3 +22,6 @@ h4{
     background-color: #343434; 
 }
 
+.listContainer{
+    width: 100%;
+}
