@@ -1,0 +1,13 @@
+.row{
+    background-color: black;
+}
+
+li{
+    font-size: x-large;
+}
+
+.profilePic{
+
+    display: flex;
+    justify-content: center;
+}
