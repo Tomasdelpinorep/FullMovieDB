@@ -1,8 +1,8 @@
-<div class="carouselContainer d-flex justify-content-end">
+<div class="carouselContainer d-flex justify-content-end mt-3">
 	<div class="text-container d-flex flex-column">
 		<h2 class="titleStyles">{{trendingMovieList[currentSlide].original_title}}</h2>
 		<p class="overviewStyles">{{trendingMovieList[currentSlide].overview}}</p>
-		<button class="btn btnStyles d-flex justify-content-center">+ info</button>
+		<button class="btn btnStyles d-flex justify-content-center">+INFO</button>
 	</div>
 	<ngb-carousel (slide)="onSlideChange($event)" *ngIf="trendingMovieBackDrops" [showNavigationArrows]="showNavigationArrows"
 		[showNavigationIndicators]="showNavigationIndicators" class="custom-carousel">

@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'poppins';
+    src: url(../../../fonts/Poppins-SemiBold.ttf);
+}
+
+*{
+    font-family: 'poppins';
+}
+
+h5{
+    padding-left: 40px;
+}
+
+nav{
+
+    padding-left: 50px;
+}
+
+.logout{
+    margin-top: 150px;
+    padding-right: 25px;
+}
+
+.w-inherit{
+    width: inherit;
+}
