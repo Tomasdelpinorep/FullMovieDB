@@ -19,7 +19,8 @@ ul{
 
 /* Esto es es color del fondo de la barra*/
 .list-group-horizontal::-webkit-scrollbar-track {
-    background-color: #343434; 
+    background-color: gray; 
+    border-radius: 50px;
 }
 
 .listContainer{
