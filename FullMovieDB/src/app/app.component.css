@@ -10,3 +10,11 @@
 div{
     background-color: #343434;
 }
+
+.w-inherit{
+    width: inherit;
+}
+
+.content{
+    overflow-x: hidden;
+}
