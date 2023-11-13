@@ -14,6 +14,10 @@ import { PopularMoviesListComponent } from './components/popular-movies-list/pop
 import { MovieDetailsPageComponent } from './ui/movie-details-page/movie-details-page.component';
 import { ApprovedComponent } from './components/approved/approved.component';
 import { AccountPageComponent } from './ui/account-page/account-page.component';
+import { RouterLink } from '@angular/router';
+import { SerieItemComponent } from './components/serie-item/serie-item.component';
+import { TopRatedSeriesListComponent } from './components/top-rated-series-list/top-rated-series-list.component';
+import { TvSeriesPageComponent } from './ui/tv-series-page/tv-series-page.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +32,17 @@ import { AccountPageComponent } from './ui/account-page/account-page.component';
     MovieDetailsPageComponent,
     ApprovedComponent,
     AccountPageComponent,
+    SerieItemComponent,
+    TopRatedSeriesListComponent,
+    TvSeriesPageComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterLink
   ],
   providers: [],
   bootstrap: [AppComponent]
