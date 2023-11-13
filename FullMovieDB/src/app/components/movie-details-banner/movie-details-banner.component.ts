@@ -1,7 +1,6 @@
 import { Component, Input, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Genre, MovieDetailsResponse } from 'src/app/models/movie-details.interface';
-import { Movies } from 'src/app/models/movie-list.interface';
 import { MovieService } from 'src/app/services/movie-service.service';
 
 @Component({

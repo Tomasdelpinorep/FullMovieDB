@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Serie } from 'src/app/models/serie-list.interface';
 
 @Component({
@@ -9,6 +9,7 @@ import { Serie } from 'src/app/models/serie-list.interface';
 export class SerieItemComponent {
 
   @Input() serie!: Serie;
+  @Output() serieClick = new EventEmitter <number>;
 
   getSerieImage(){
     return 'https://image.tmdb.org/t/p/w500/'+this.serie.poster_path;

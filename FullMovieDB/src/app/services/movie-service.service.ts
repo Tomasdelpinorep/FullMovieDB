@@ -37,7 +37,8 @@ export class MovieService {
   }
 
   getFilmById(id: number): Observable <MovieDetailsResponse>{
-    return this.http.get<MovieDetailsResponse>(`https://api.themoviedb.org/3/movie/${id}?api_key=02bd87fa25457bdbc212118905ab3ec0`);
+    return this.http.get<MovieDetailsResponse>
+    (`https://api.themoviedb.org/3/movie/${id}?api_key=02bd87fa25457bdbc212118905ab3ec0`);
   }
 
 }
