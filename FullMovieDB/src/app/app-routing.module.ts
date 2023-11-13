@@ -8,12 +8,13 @@ import { AccountPageComponent } from './ui/account-page/account-page.component';
 import { TvSeriesPageComponent } from './ui/tv-series-page/tv-series-page.component';
 
 const routes: Routes = [
-  {path:'home', component:HomePageComponent},
+  {path:'home', component: HomePageComponent},
   {path:'', pathMatch:'full',redirectTo:'/home'},
   {path:'movie/:id',component:MovieDetailsPageComponent},
   {path: 'tv', component: TvSeriesPageComponent},
   {path:'approved',component:ApprovedComponent},
   {path:'account',component:AccountPageComponent},
+  {path:'movie/:id',component: MovieDetailsPageComponent},
   {path:'*', component: PageNotFoundComponent}
 ];
 

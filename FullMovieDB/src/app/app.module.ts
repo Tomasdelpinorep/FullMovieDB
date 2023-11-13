@@ -20,6 +20,7 @@ import { TopRatedSeriesListComponent } from './components/top-rated-series-list/
 import { TvSeriesPageComponent } from './ui/tv-series-page/tv-series-page.component';
 import { SeriesOnairListComponent } from './components/series-onair-list/series-onair-list.component';
 import { SerieDetailsPageComponent } from './ui/serie-details-page/serie-details-page.component';
+import { MovieDetailsBannerComponent } from './components/movie-details-banner/movie-details-banner.component';
 
 @NgModule({
   declarations: [
@@ -39,8 +40,9 @@ import { SerieDetailsPageComponent } from './ui/serie-details-page/serie-details
     TvSeriesPageComponent,
     SeriesOnairListComponent,
     SerieDetailsPageComponent,
-    
+    MovieDetailsBannerComponent,   
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
