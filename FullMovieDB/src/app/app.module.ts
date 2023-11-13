@@ -12,6 +12,8 @@ import { MovieItemComponent } from './components/movie-item/movie-item.component
 import { HttpClientModule } from '@angular/common/http';
 import { PopularMoviesListComponent } from './components/popular-movies-list/popular-movies-list.component';
 import { MovieDetailsPageComponent } from './ui/movie-details-page/movie-details-page.component';
+import { ApprovedComponent } from './components/approved/approved.component';
+import { AccountPageComponent } from './ui/account-page/account-page.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { MovieDetailsPageComponent } from './ui/movie-details-page/movie-details
     MovieItemComponent,
     PopularMoviesListComponent,
     MovieDetailsPageComponent,
+    ApprovedComponent,
+    AccountPageComponent,
     
   ],
   imports: [
