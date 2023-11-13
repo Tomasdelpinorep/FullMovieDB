@@ -14,7 +14,8 @@ https: any;
   logIn() {
     this.authService.getRequestToken().subscribe(resp => {
       sessionStorage.setItem('REQUEST_TOKEN',resp.request_token);
-      window.location.href = `https://www.themoviedb.org/authenticate/${sessionStorage.getItem('REQUEST_TOKEN')}?redirect_to=localhost:4200/approved`;
+      window.location.href = `https://www.themoviedb.org/authenticate/${sessionStorage.getItem('REQUEST_TOKEN')}?redirect_to=http://localhost:4200/approved`;
+
     })
   }
 }

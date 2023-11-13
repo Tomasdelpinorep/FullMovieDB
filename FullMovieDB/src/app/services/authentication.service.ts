@@ -15,9 +15,9 @@ export class AuthenticationService {
     //https://api.themoviedb.org/3/authentication/token/new?api_key=fba6287e1b5585e45727ead4703af755
   }
 
-  createSession(requestToken :string){
+  createSession():Observable<any>{
     return this.http.post(`${environment.baseUrl}/authentication/session/new?api_key=${environment.apiKey}`, {
-      request_token: requestToken
+      request_token: sessionStorage.getItem('REQUEST_TOKEN')
     });
   }
 }
