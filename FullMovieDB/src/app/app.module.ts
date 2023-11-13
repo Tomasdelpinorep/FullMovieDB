@@ -19,6 +19,7 @@ import { SerieItemComponent } from './components/serie-item/serie-item.component
 import { TopRatedSeriesListComponent } from './components/top-rated-series-list/top-rated-series-list.component';
 import { TvSeriesPageComponent } from './ui/tv-series-page/tv-series-page.component';
 import { SeriesOnairListComponent } from './components/series-onair-list/series-onair-list.component';
+import { SerieDetailsPageComponent } from './ui/serie-details-page/serie-details-page.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { SeriesOnairListComponent } from './components/series-onair-list/series-
     TopRatedSeriesListComponent,
     TvSeriesPageComponent,
     SeriesOnairListComponent,
+    SerieDetailsPageComponent,
     
   ],
   imports: [
