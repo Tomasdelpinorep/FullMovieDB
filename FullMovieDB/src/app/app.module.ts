@@ -14,6 +14,13 @@ import { PopularMoviesListComponent } from './components/popular-movies-list/pop
 import { MovieDetailsPageComponent } from './ui/movie-details-page/movie-details-page.component';
 import { ApprovedComponent } from './components/approved/approved.component';
 import { AccountPageComponent } from './ui/account-page/account-page.component';
+import { ActorsPageComponent } from './ui/actors-page/actors-page.component';
+import { SeriesPageComponent } from './ui/series-page/series-page.component';
+import { MoviesPageComponent } from './ui/movies-page/movies-page.component';
+import { PopularActorsListComponent } from './components/popular-actors-list/popular-actors-list.component';
+import { ActorsCarouselComponent } from './components/actors-carousel/actors-carousel.component';
+import { ActorDetailsPageComponent } from './ui/actor-details-page/actor-details-page.component';
+import { ActorItemComponent } from './components/actor-item/actor-item.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +35,21 @@ import { AccountPageComponent } from './ui/account-page/account-page.component';
     MovieDetailsPageComponent,
     ApprovedComponent,
     AccountPageComponent,
+    ActorsPageComponent,
+    SeriesPageComponent,
+    MoviesPageComponent,
+    PopularActorsListComponent,
+    ActorsCarouselComponent,
+    ActorDetailsPageComponent,
+    ActorItemComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
