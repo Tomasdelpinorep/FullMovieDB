@@ -15,4 +15,9 @@ export class SerieService {
     ('https://api.themoviedb.org/3/tv/top_rated?api_key=fba6287e1b5585e45727ead4703af755');
   }
 
+  getSeriesOnAir(): Observable<SerieListResponse>{
+    return this.httpClient.get<SerieListResponse>
+    ('https://api.themoviedb.org/3/tv/on_the_air?api_key=fba6287e1b5585e45727ead4703af755');
+  }
+
 }

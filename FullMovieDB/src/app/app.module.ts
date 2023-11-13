@@ -18,6 +18,7 @@ import { RouterLink } from '@angular/router';
 import { SerieItemComponent } from './components/serie-item/serie-item.component';
 import { TopRatedSeriesListComponent } from './components/top-rated-series-list/top-rated-series-list.component';
 import { TvSeriesPageComponent } from './ui/tv-series-page/tv-series-page.component';
+import { SeriesOnairListComponent } from './components/series-onair-list/series-onair-list.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { TvSeriesPageComponent } from './ui/tv-series-page/tv-series-page.compon
     SerieItemComponent,
     TopRatedSeriesListComponent,
     TvSeriesPageComponent,
+    SeriesOnairListComponent,
     
   ],
   imports: [
