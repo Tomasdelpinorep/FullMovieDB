@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ActorDetailsResponse } from 'src/app/models/actor-details.interface';
+import { Actor } from 'src/app/models/actor-list.interface';
 import { ActorService } from 'src/app/services/actors.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class ActorDetailsPageComponent implements OnInit{
 @Output() actorDetails! :ActorDetailsResponse;
 route: ActivatedRoute = inject(ActivatedRoute);
 actorId ! :number;
+popularList :Actor [] = []
 
 constructor(private actorService: ActorService){
   this.actorId = Number(this.route.snapshot.params['id']);
@@ -19,6 +21,10 @@ constructor(private actorService: ActorService){
   ngOnInit(): void {
     this.actorService.getActorDetails(this.actorId).subscribe(resp => {
       this.actorDetails = resp;
+    })
+
+    this.actorService.getActorList().subscribe(resp => {
+      this.popularList = resp.results;
     })
   }
 }

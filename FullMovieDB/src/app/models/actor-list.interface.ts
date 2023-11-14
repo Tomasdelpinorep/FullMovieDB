@@ -16,10 +16,10 @@ export interface Actor {
   original_name: string;
   popularity: number;
   profile_path: string;
-  known_for: KnownFor[];
+  known_for: KnownForMovie[];
 }
 
-export interface KnownFor {
+export interface KnownForMovie {
   adult: boolean;
   backdrop_path: string;
   id: number;

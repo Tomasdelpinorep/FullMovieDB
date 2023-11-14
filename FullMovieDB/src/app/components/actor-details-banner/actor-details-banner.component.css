@@ -22,6 +22,7 @@ img{
     padding: 0 !important;
     max-width: 100%;
     max-height: 90%;
+    border-radius: 5px;
 }
 
 h2 {
@@ -29,10 +30,11 @@ h2 {
     text-shadow: 0 0 5px #9EFF00, 0 0 15px #9EFF00;
 }
 
-.textCol{
-    height: 90%;
-}
-
 h5{
     color: white;
+}
+
+.details{
+    font-size: 0.85em;
+    color: #C3C3C3;
 }

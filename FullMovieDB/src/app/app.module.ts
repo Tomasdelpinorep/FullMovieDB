@@ -30,6 +30,8 @@ import { SerieDetailsPageComponent } from './ui/serie-details-page/serie-details
 import { MovieDetailsBannerComponent } from './components/movie-details-banner/movie-details-banner.component';
 import { SerieDetailsBannerComponent } from './components/serie-details-banner/serie-details-banner.component';
 import { ActorDetailsBannerComponent } from './components/actor-details-banner/actor-details-banner.component';
+import { KnownForListComponent } from './components/known-for-list/known-for-list.component';
+import { KnownForMovieItemComponent } from './components/known-for-movie-item/known-for-movie-item.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,9 @@ import { ActorDetailsBannerComponent } from './components/actor-details-banner/a
     SerieDetailsPageComponent,
     MovieDetailsBannerComponent,
     SerieDetailsBannerComponent,
-    ActorDetailsBannerComponent,   
+    ActorDetailsBannerComponent,
+    KnownForListComponent,
+    KnownForMovieItemComponent,   
   ],
   
   imports: [
