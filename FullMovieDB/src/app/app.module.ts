@@ -29,6 +29,7 @@ import { SeriesOnairListComponent } from './components/series-onair-list/series-
 import { SerieDetailsPageComponent } from './ui/serie-details-page/serie-details-page.component';
 import { MovieDetailsBannerComponent } from './components/movie-details-banner/movie-details-banner.component';
 import { SerieDetailsBannerComponent } from './components/serie-details-banner/serie-details-banner.component';
+import { CompanyItemComponent } from './components/company-item/company-item.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { SerieDetailsBannerComponent } from './components/serie-details-banner/s
     SeriesOnairListComponent,
     SerieDetailsPageComponent,
     MovieDetailsBannerComponent,
-    SerieDetailsBannerComponent,   
+    SerieDetailsBannerComponent,
+    CompanyItemComponent,   
   ],
   
   imports: [
