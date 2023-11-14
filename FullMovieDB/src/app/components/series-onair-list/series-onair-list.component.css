@@ -1,10 +1,8 @@
 ul{
-    width: 76%;
-    margin-left: 280px;
     width: 100%;
 }
 
-.pelis{
+.series{
     width: 200px;
 }
 
@@ -28,4 +26,3 @@ ul{
 .listContainer{
     width: 100%;
 }
-

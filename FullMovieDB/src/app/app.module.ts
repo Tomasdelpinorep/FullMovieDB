@@ -13,6 +13,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { PopularMoviesListComponent } from './components/popular-movies-list/popular-movies-list.component';
 import { UserDetailsBannerComponent } from './components/user-details-banner/user-details-banner.component';
 import { UserDetailsComponent } from './ui/user-details/user-details.component';
+import { MovieDetailsPageComponent } from './ui/movie-details-page/movie-details-page.component';
+import { ApprovedComponent } from './components/approved/approved.component';
+import { AccountPageComponent } from './ui/account-page/account-page.component';
+import { RouterLink } from '@angular/router';
+import { SerieItemComponent } from './components/serie-item/serie-item.component';
+import { TopRatedSeriesListComponent } from './components/top-rated-series-list/top-rated-series-list.component';
+import { TvSeriesPageComponent } from './ui/tv-series-page/tv-series-page.component';
+import { SeriesOnairListComponent } from './components/series-onair-list/series-onair-list.component';
+import { SerieDetailsPageComponent } from './ui/serie-details-page/serie-details-page.component';
+import { MovieDetailsBannerComponent } from './components/movie-details-banner/movie-details-banner.component';
+import { SerieDetailsBannerComponent } from './components/serie-details-banner/serie-details-banner.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +37,24 @@ import { UserDetailsComponent } from './ui/user-details/user-details.component';
     PopularMoviesListComponent,
     UserDetailsBannerComponent,
     UserDetailsComponent,
-    
+    MovieDetailsPageComponent,
+    ApprovedComponent,
+    AccountPageComponent,
+    SerieItemComponent,
+    TopRatedSeriesListComponent,
+    TvSeriesPageComponent,
+    SeriesOnairListComponent,
+    SerieDetailsPageComponent,
+    MovieDetailsBannerComponent,
+    SerieDetailsBannerComponent,   
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterLink
   ],
   providers: [],
   bootstrap: [AppComponent]
