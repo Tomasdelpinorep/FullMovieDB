@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-4 moviePoster">
+        <img [src]="getActorImageUrl()" class="p-2" alt="MoviePoster">
+    </div>
+
+    <div class="col-7 MovieInfo">
+        <h2 class=" fw-bold mt-5 text-center" style="color: #9EFF00;">{{actorDetails.name}}</h2>
+        <p class="fw-bold text-light text-center">
+            <span>{{actorDetails.birthday}} ||</span>
+            <span>{{actorDetails.also_known_as}}</span>
+        </p>
+        <div class="container">
+            <div class="text-light text-center">
+                <h3 class="mt-5 fw-bold"> OVERVIEW </h3>
+                <p class="mt-3 fw-bold" style="color: #C3C3C3;">{{actorDetails.biography}}</p>
+            </div>
+        </div>
+    </div>
+</div>
