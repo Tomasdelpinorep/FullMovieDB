@@ -26,3 +26,16 @@ ul{
 .listContainer{
     width: 100%;
 }
+
+
+.paginationContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pagination{
+    --bs-pagination-color: #9EFF00 !important; 
+}
