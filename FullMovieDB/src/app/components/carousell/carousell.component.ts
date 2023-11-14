@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { TrendingMovie } from 'src/app/models/trending-movies';
 import { MovieService } from 'src/app/services/movie-service.service';
