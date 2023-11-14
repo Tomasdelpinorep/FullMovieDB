@@ -21,6 +21,14 @@ import { PopularActorsListComponent } from './components/popular-actors-list/pop
 import { ActorsCarouselComponent } from './components/actors-carousel/actors-carousel.component';
 import { ActorDetailsPageComponent } from './ui/actor-details-page/actor-details-page.component';
 import { ActorItemComponent } from './components/actor-item/actor-item.component';
+import { RouterLink } from '@angular/router';
+import { SerieItemComponent } from './components/serie-item/serie-item.component';
+import { TopRatedSeriesListComponent } from './components/top-rated-series-list/top-rated-series-list.component';
+import { TvSeriesPageComponent } from './ui/tv-series-page/tv-series-page.component';
+import { SeriesOnairListComponent } from './components/series-onair-list/series-onair-list.component';
+import { SerieDetailsPageComponent } from './ui/serie-details-page/serie-details-page.component';
+import { MovieDetailsBannerComponent } from './components/movie-details-banner/movie-details-banner.component';
+import { SerieDetailsBannerComponent } from './components/serie-details-banner/serie-details-banner.component';
 
 @NgModule({
   declarations: [
@@ -43,13 +51,22 @@ import { ActorItemComponent } from './components/actor-item/actor-item.component
     ActorDetailsPageComponent,
     ActorItemComponent,
     
+    SerieItemComponent,
+    TopRatedSeriesListComponent,
+    TvSeriesPageComponent,
+    SeriesOnairListComponent,
+    SerieDetailsPageComponent,
+    MovieDetailsBannerComponent,
+    SerieDetailsBannerComponent,   
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    RouterLink
   ],
   providers: [],
   bootstrap: [AppComponent]
