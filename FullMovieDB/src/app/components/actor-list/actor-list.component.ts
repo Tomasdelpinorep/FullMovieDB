@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Cast } from 'src/app/models/actor-list-credits.interface';
 import { Actor } from 'src/app/models/actor-list.interface';
+import { MovieDetailsResponse } from 'src/app/models/movie-details.interface';
 import { ActorService } from 'src/app/services/actors.service';
 
 @Component({
@@ -9,13 +11,14 @@ import { ActorService } from 'src/app/services/actors.service';
 })
 export class ActorListComponent {
 
-  actorList: Actor[] = [];
+  @Input() movie!: MovieDetailsResponse;
+  actorList: Cast[] = [];
 
   constructor(private actorService: ActorService){}
 
   ngOnInit(): void {
-    this.actorService.getActorList().subscribe(resp =>{
-      this.actorList = resp.results;
+    this.actorService.getActorsByMovie(this.movie.id).subscribe(resp =>{
+      this.actorList = resp.cast;
     })
   }
 }

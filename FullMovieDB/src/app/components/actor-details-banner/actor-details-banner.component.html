@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-3 d-flex flex-wrap align-content-center justify-content-center">
+        <div class="actorPhoto">
+            <img [src]="getActorImageUrl()" class="p-2" alt="actor photo">
+        </div>
+    </div>
+
+    <div class="col-8 d-flex flex-column justify-content-center h-100">
+        <div class="textCol">
+            <h2 class=" fw-bold" style="color: #9EFF00;">{{actorDetails.name}}</h2>
+            <div class="text-light">
+                <h3 class="mt-2 fw-bold"> Biography </h3>
+                <p class="mt-3 fw-bold" style="color: #C3C3C3;">{{actorDetails.biography}}</p>
+            </div>
+            <h5>Birthday: {{actorDetails.birthday}}</h5>
+            <h5>Place of birth: {{actorDetails.place_of_birth}}</h5>
+            <h5>Gender {{actorDetails.gender}}</h5>
+        </div>
+    </div>
+</div>
