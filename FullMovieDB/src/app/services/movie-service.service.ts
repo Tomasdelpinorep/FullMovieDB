@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { MovieListResponse } from '../models/movie-list.interface';
 import { TrendingMoviesResponse } from '../models/trending-movies';
 import { ImageListResponse } from '../models/imageList';
+import { MovieDetailsResponse } from '../models/movie-details.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -33,6 +34,11 @@ export class MovieService {
   getTrendingMoviesBackDrops(movieId:number):Observable<ImageListResponse>{
     return this.http.get<ImageListResponse>(`
     https://api.themoviedb.org/3/movie/${movieId}/images`);
+  }
+
+  getFilmById(id: number): Observable <MovieDetailsResponse>{
+    return this.http.get<MovieDetailsResponse>
+    (`https://api.themoviedb.org/3/movie/${id}?api_key=02bd87fa25457bdbc212118905ab3ec0`);
   }
 
 }
