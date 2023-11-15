@@ -29,6 +29,9 @@ import { SeriesOnairListComponent } from './components/series-onair-list/series-
 import { SerieDetailsPageComponent } from './ui/serie-details-page/serie-details-page.component';
 import { MovieDetailsBannerComponent } from './components/movie-details-banner/movie-details-banner.component';
 import { SerieDetailsBannerComponent } from './components/serie-details-banner/serie-details-banner.component';
+import { ActorDetailsBannerComponent } from './components/actor-details-banner/actor-details-banner.component';
+import { KnownForListComponent } from './components/known-for-list/known-for-list.component';
+import { KnownForMovieItemComponent } from './components/known-for-movie-item/known-for-movie-item.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +60,10 @@ import { SerieDetailsBannerComponent } from './components/serie-details-banner/s
     SeriesOnairListComponent,
     SerieDetailsPageComponent,
     MovieDetailsBannerComponent,
-    SerieDetailsBannerComponent,   
+    SerieDetailsBannerComponent,
+    ActorDetailsBannerComponent,
+    KnownForListComponent,
+    KnownForMovieItemComponent,   
   ],
   
   imports: [
