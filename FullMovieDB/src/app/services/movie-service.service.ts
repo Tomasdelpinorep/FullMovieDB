@@ -6,6 +6,7 @@ import { TrendingMoviesResponse } from '../models/trending-movies';
 import { ImageListResponse } from '../models/imageList';
 import { MovieDetailsResponse, ProductionCompany } from '../models/movie-details.interface';
 import { ActorListCreditsResponse } from '../models/actor-list-credits.interface';
+import { CompanyDetailsResponse } from '../models/company-details.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -44,5 +45,7 @@ export class MovieService {
     return this.http.get<ActorListCreditsResponse>
     (`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=02bd87fa25457bdbc212118905ab3ec0`);
   }
+
+  
 
 }

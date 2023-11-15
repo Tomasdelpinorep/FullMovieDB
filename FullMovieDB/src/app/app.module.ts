@@ -31,6 +31,7 @@ import { SerieDetailsBannerComponent } from './components/serie-details-banner/s
 import { CompanyItemComponent } from './components/company-item/company-item.component';
 import { ActorListComponent } from './components/actor-list/actor-list.component';
 import { ActorDetailsBannerComponent } from './components/actor-details-banner/actor-details-banner.component';
+import { CompanyListComponent } from './components/company-list/company-list.component';
 
 
 @NgModule({
@@ -61,7 +62,7 @@ import { ActorDetailsBannerComponent } from './components/actor-details-banner/a
     SerieDetailsBannerComponent,
     CompanyItemComponent,
     ActorListComponent,   
-    ActorDetailsBannerComponent,   
+    ActorDetailsBannerComponent, CompanyListComponent,   
   ],
   
   imports: [

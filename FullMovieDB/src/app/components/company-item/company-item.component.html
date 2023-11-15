@@ -1,6 +1,7 @@
-<a [routerLink]="['/company/', company.id]">
+ <a [routerLink]="['/company/', company.id]">
     <div class="card shadow-sm mb-2 border border-3">
-        <img [src]="getMovieImage()">
+        <img [src]="getCompanyImage()">
     </div>
-</a>
+    <h5 class="nameStyle negMargin">{{company.name}}</h5>
+</a> 
 

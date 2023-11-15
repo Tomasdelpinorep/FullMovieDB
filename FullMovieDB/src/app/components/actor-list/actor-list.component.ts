@@ -11,6 +11,7 @@ import { MovieService } from 'src/app/services/movie-service.service';
 })
 export class ActorListComponent implements OnInit{
 
+  // Este input es el que recibe el id de la película desde el componente padre, movie-details-page.component.ts
   @Input() movieId!: number;
   actorsList!: Actor[];
   cast!: Cast[];
