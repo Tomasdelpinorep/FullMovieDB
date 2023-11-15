@@ -6,6 +6,7 @@
           class="mt-2 pelis me-3" 
           *ngFor="let a of actorList"
           [actor]="a"
+          [page]="page"
         ></app-actor-item>
       </ul>
     </div>
@@ -16,7 +17,7 @@
         [maxSize]="3"
         [rotate]="true"
         [(page)]="page"
-        (pageChange)="loadNewPage()"
+        (pageChange)="loadNewPage($event)"
         class="align-self-centers pagination"
         aria-label="Default pagination"
       ></ngb-pagination>

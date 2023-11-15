@@ -14,6 +14,7 @@ export class ActorDetailsPageComponent implements OnInit{
 route: ActivatedRoute = inject(ActivatedRoute);
 actorId ! :number;
 popularList :Actor [] = []
+pageNumber !:number;
 
 constructor(private actorService: ActorService){
   this.actorId = Number(this.route.snapshot.params['id']);
@@ -23,8 +24,12 @@ constructor(private actorService: ActorService){
       this.actorDetails = resp;
     })
 
-    this.actorService.getActorList().subscribe(resp => {
+    this.actorService.getPagedActorList(this.pageNumber).subscribe(resp => {
       this.popularList = resp.results;
     })
+
+    //Gets page number from which the clicked actor was in. Used to get the correct page of the popular list where the actor's known_for list can be found
+    this.pageNumber = Number(this.route.snapshot.queryParamMap.get('page'));
+    console.log(this.pageNumber);
   }
 }

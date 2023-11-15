@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Actor } from 'src/app/models/actor-list.interface';
 import { ActorService } from 'src/app/services/actors.service';
 
@@ -8,7 +9,8 @@ import { ActorService } from 'src/app/services/actors.service';
   styleUrls: ['./popular-actors-list.component.css']
 })
 export class PopularActorsListComponent implements OnInit {
-  constructor(private actorService: ActorService) { }
+  constructor(private actorService: ActorService,
+    private router :Router) { }
   actorList: Actor[] = [];
   page = 1;
   totalResults !:number;
@@ -20,7 +22,8 @@ export class PopularActorsListComponent implements OnInit {
     })
   }
 
-  loadNewPage(): void {
+  loadNewPage(clickedPage:number): void {
     this.actorService.getPagedActorList(this.page).subscribe(resp => { this.actorList = resp.results });
+    this.page = clickedPage;
   }
 }
