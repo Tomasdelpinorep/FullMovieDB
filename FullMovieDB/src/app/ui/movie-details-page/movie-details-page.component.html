@@ -1,8 +1,8 @@
 <div>
-    <div class="info banner">
-        <app-movie-details-banner></app-movie-details-banner>
+    <app-movie-details-banner (toEmit)="setMovieId($event)"></app-movie-details-banner>
+    <div>
+        <h1 class="text-center fw-bold mt-5" style="color: #9eff00">ACTORS</h1>
     </div>
-    <div class="listas mt-5">
-        <app-actor-list></app-actor-list>
-    </div>
+    <app-actor-list [movieId]="movieId" class="mt-5"></app-actor-list>
+    <app-company-item [movieId]="movieId"></app-company-item>
 </div>

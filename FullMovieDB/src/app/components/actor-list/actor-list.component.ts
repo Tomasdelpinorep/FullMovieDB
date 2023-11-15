@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Cast } from 'src/app/models/actor-list-credits.interface';
 import { Actor } from 'src/app/models/actor-list.interface';
 import { MovieDetailsResponse } from 'src/app/models/movie-details.interface'
@@ -9,7 +9,7 @@ import { MovieService } from 'src/app/services/movie-service.service';
   templateUrl: './actor-list.component.html',
   styleUrls: ['./actor-list.component.css']
 })
-export class ActorListComponent {
+export class ActorListComponent implements OnInit{
 
   @Input() movieId!: number;
   actorsList!: Actor[];
@@ -24,7 +24,7 @@ export class ActorListComponent {
     });
 
     this.movieService.getCreditsByMovie(this.movieId).subscribe(resp => {
-      this.cast = resp.cast;
+      this.cast = resp.cast.filter(c => c.known_for_department == "Acting");
     });
   }
 }

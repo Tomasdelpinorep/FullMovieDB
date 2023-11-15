@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Cast } from 'src/app/models/actor-list-credits.interface';
 import { Actor } from 'src/app/models/actor-list.interface';
 import { environment } from 'src/environments/environment';
 
@@ -8,9 +9,9 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./actor-item.component.css']
 })
 export class ActorItemComponent {
-@Input() actor !:Actor;
+  @Input() actor !: Actor | Cast;
 
-getActorImageUrl(){
-  return environment.smallerPng.concat(this.actor.profile_path);
-}
+  getActorImageUrl(){
+    return `${environment.smallerPng}${this.actor.profile_path}`;
+  }
 }
