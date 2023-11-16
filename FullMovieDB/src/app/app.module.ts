@@ -16,6 +16,12 @@ import { UserDetailsComponent } from './ui/user-details/user-details.component';
 import { MovieDetailsPageComponent } from './ui/movie-details-page/movie-details-page.component';
 import { ApprovedComponent } from './components/approved/approved.component';
 import { AccountPageComponent } from './ui/account-page/account-page.component';
+import { ActorsPageComponent } from './ui/actors-page/actors-page.component';
+import { MoviesPageComponent } from './ui/movies-page/movies-page.component';
+import { PopularActorsListComponent } from './components/popular-actors-list/popular-actors-list.component';
+import { ActorsCarouselComponent } from './components/actors-carousel/actors-carousel.component';
+import { ActorDetailsPageComponent } from './ui/actor-details-page/actor-details-page.component';
+import { ActorItemComponent } from './components/actor-item/actor-item.component';
 import { RouterLink } from '@angular/router';
 import { SerieItemComponent } from './components/serie-item/serie-item.component';
 import { TopRatedSeriesListComponent } from './components/top-rated-series-list/top-rated-series-list.component';
@@ -24,6 +30,14 @@ import { SeriesOnairListComponent } from './components/series-onair-list/series-
 import { SerieDetailsPageComponent } from './ui/serie-details-page/serie-details-page.component';
 import { MovieDetailsBannerComponent } from './components/movie-details-banner/movie-details-banner.component';
 import { SerieDetailsBannerComponent } from './components/serie-details-banner/serie-details-banner.component';
+import { CompanyItemComponent } from './components/company-item/company-item.component';
+import { ActorListComponent } from './components/actor-list/actor-list.component';
+import { ActorDetailsBannerComponent } from './components/actor-details-banner/actor-details-banner.component';
+import { KnownForListComponent } from './components/known-for-list/known-for-list.component';
+import { KnownForMovieItemComponent } from './components/known-for-movie-item/known-for-movie-item.component';
+import { CompanyListComponent } from './components/company-list/company-list.component';
+
+
 
 @NgModule({
   declarations: [
@@ -40,13 +54,25 @@ import { SerieDetailsBannerComponent } from './components/serie-details-banner/s
     MovieDetailsPageComponent,
     ApprovedComponent,
     AccountPageComponent,
+    ActorsPageComponent,
+    MoviesPageComponent,
+    PopularActorsListComponent,
+    ActorsCarouselComponent,
+    ActorDetailsPageComponent,
+    ActorItemComponent,
     SerieItemComponent,
     TopRatedSeriesListComponent,
     TvSeriesPageComponent,
     SeriesOnairListComponent,
     SerieDetailsPageComponent,
     MovieDetailsBannerComponent,
-    SerieDetailsBannerComponent,   
+    SerieDetailsBannerComponent,
+    ActorDetailsBannerComponent,
+    KnownForListComponent,
+    KnownForMovieItemComponent,   
+    CompanyItemComponent,
+    ActorListComponent,   
+    ActorDetailsBannerComponent, CompanyListComponent,   
   ],
   
   imports: [
@@ -54,6 +80,7 @@ import { SerieDetailsBannerComponent } from './components/serie-details-banner/s
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
+    NgbModule,
     RouterLink
   ],
   providers: [],

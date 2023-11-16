@@ -7,9 +7,12 @@ nav{
     padding-left: 50px;
 }
 
-.logout{
-    margin-top: 150px;
-    padding-right: 25px;
+.log{
+    position: fixed;
+    display: flex;
+    width: 16.66666666667%;
+    justify-content: center;
+    bottom: 0;
 }
 
 .w-inherit{

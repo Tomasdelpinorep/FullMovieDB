@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, inject } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Genre, MovieDetailsResponse } from 'src/app/models/movie-details.interface';
 import { MovieService } from 'src/app/services/movie-service.service';
@@ -16,6 +16,7 @@ export class MovieDetailsBannerComponent implements OnInit{
   genderList: Genre[] = [];
   releaseDate: string = '';
   runtime: number = 0;
+  @Output() toEmit = new EventEmitter<number>();
 
   constructor(private movieService: MovieService){
     this.movieId = Number(this.route.snapshot.params['id']);
@@ -27,7 +28,8 @@ export class MovieDetailsBannerComponent implements OnInit{
       this.genderList = resp.genres;
       this.releaseDate = resp.release_date;
       this.runtime = resp.runtime;
-    })
+    });
+    this.toEmit.emit(this.movieId);
   }
   
   getMovieImage(){
