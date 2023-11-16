@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-3 d-flex flex-wrap justify-content-center">
+        <div class="companyPhoto">
+            <img [src]="getCompanyImage()" class="p-2" alt="actor photo">
+        </div>
+    </div>
+
+    <div class="col-8 d-flex flex-column justify-content-center h-100">
+        <div class="mt-3">
+            <h2 class=" fw-bold" style="color: #9EFF00;">{{companyDetails.name}}</h2>
+            <div class="text-light">
+                <h3 class="mt-2 fw-bold"> Description </h3>
+                <p class="mt-3 fw-bold" style="color: #C3C3C3;">{{companyDetails.description}}</p>
+            </div>
+            <div>
+                <h5> Origin Country: {{companyDetails.origin_country}}</h5>
+            </div>
+        </div>
+    </div>
+</div>
+

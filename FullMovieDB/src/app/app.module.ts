@@ -35,6 +35,7 @@ import { KnownForListComponent } from './components/known-for-list/known-for-lis
 import { KnownForMovieItemComponent } from './components/known-for-movie-item/known-for-movie-item.component';
 import { CompanyListComponent } from './components/company-list/company-list.component';
 import { CompanyDetailsPageComponent } from './ui/company-details-page/company-details-page.component';
+import { CompanyDetailsBannerComponent } from './components/company-details-banner/company-details-banner.component';
 
 
 
@@ -69,7 +70,7 @@ import { CompanyDetailsPageComponent } from './ui/company-details-page/company-d
     KnownForMovieItemComponent,   
     CompanyItemComponent,
     ActorListComponent,   
-    ActorDetailsBannerComponent, CompanyListComponent, CompanyDetailsPageComponent,   
+    ActorDetailsBannerComponent, CompanyListComponent, CompanyDetailsPageComponent, CompanyDetailsBannerComponent,   
   ],
   
   imports: [
