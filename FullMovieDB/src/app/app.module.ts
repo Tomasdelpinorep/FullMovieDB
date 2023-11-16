@@ -34,6 +34,11 @@ import { ActorDetailsBannerComponent } from './components/actor-details-banner/a
 import { KnownForListComponent } from './components/known-for-list/known-for-list.component';
 import { KnownForMovieItemComponent } from './components/known-for-movie-item/known-for-movie-item.component';
 import { CompanyListComponent } from './components/company-list/company-list.component';
+import { SearchMoviesComponent } from './components/search-movies/search-movies.component';
+import { SearchActorsComponent } from './components/search-actors/search-actors.component';
+import { SearchSeriesComponent } from './components/search-series/search-series.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -68,7 +73,7 @@ import { CompanyListComponent } from './components/company-list/company-list.com
     KnownForMovieItemComponent,   
     CompanyItemComponent,
     ActorListComponent,   
-    ActorDetailsBannerComponent, CompanyListComponent,   
+    ActorDetailsBannerComponent, CompanyListComponent, SearchMoviesComponent, SearchActorsComponent, SearchSeriesComponent,   
   ],
   
   imports: [
@@ -77,7 +82,8 @@ import { CompanyListComponent } from './components/company-list/company-list.com
     NgbModule,
     HttpClientModule,
     NgbModule,
-    RouterLink
+    RouterLink,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -46,6 +46,9 @@ export class MovieService {
     (`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=02bd87fa25457bdbc212118905ab3ec0`);
   }
 
-  
+  getMovieListWithQuery(query :string){
+    return this.http.get<ActorListCreditsResponse>
+    (`https://api.themoviedb.org/3/search/movie/?query=${query}&api_key=02bd87fa25457bdbc212118905ab3ec0`);
+  }
 
 }
