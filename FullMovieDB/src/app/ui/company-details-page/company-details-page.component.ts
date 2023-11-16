@@ -8,19 +8,7 @@ import { CompanyService } from 'src/app/services/company.service';
   templateUrl: './company-details-page.component.html',
   styleUrls: ['./company-details-page.component.css']
 })
-export class CompanyDetailsPageComponent implements OnInit{
-
-  @Output() companyDetails!: CompanyDetailsResponse;
-  route: ActivatedRoute = inject(ActivatedRoute);
-  companyId!: number;
-
-  constructor(private companyService: CompanyService){}
-
-  ngOnInit(): void {
-    this.companyService.getCompanyDetails(this.companyId).subscribe(resp => {
-      this.companyDetails = resp;
-    })
-  }
+export class CompanyDetailsPageComponent{
 
 
 }
