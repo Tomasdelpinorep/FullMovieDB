@@ -25,6 +25,8 @@ const routes: Routes = [
   {path:'series', component: SeriesPageComponent},
   {path:'movies', component: MoviesPageComponent},
   {path:'actor/:id', component: ActorDetailsPageComponent},
+  {path:'actors/:id', component: ActorDetailsPageComponent},
+  {path:'*', component: PageNotFoundComponent},
   {path:'**', component: PageNotFoundComponent}
 ];
 
