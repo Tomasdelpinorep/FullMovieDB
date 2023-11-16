@@ -12,6 +12,9 @@ export class ActorItemComponent {
   @Input() actor !: Actor | Cast;
 
   getActorImageUrl(){
+    if(this.actor.profile_path == null){
+      return "https://cdn-icons-png.flaticon.com/512/5266/5266579.png";
+    }
     return `${environment.smallerPng}${this.actor.profile_path}`;
   }
 }

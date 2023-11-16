@@ -3,7 +3,7 @@
     src: url(../../../fonts/Poppins-SemiBold.ttf);
 }
 
-*{
+div{
     font-family: 'poppins';
     background-color: #343434;
 }
@@ -12,10 +12,7 @@
     overflow-x: hidden;
 }
 
-.w-inherit{
-    width: inherit;
-}
-
 .maxWidth{
     max-width: 100%;
 }
+
