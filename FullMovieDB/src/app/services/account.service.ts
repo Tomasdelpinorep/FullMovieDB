@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { AccountDetailsResponse } from '../models/account-details.interface';
 import { environment } from 'src/environments/environment';
 import { MovieListResponse } from '../models/movie-list.interface';
+import { AddMovieToList } from '../models/addMovieToList.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -29,5 +30,16 @@ export class AccountService {
     let sessionId = sessionStorage.getItem('SESSION_ID');
     return this.http.get<MovieListResponse>
     (`https://api.themoviedb.org/3/account/${accountId}/favorite/movies?api_key=${environment.apiKey}&session_id=${sessionId}`);
+  }
+
+  addMovieToWatchList(movieId: number): Observable<AddMovieToList>{
+    let accountId = sessionStorage.getItem('ACCOUNT_ID');
+    let sessionId = sessionStorage.getItem('SESSION_ID');
+    return this.http.post<AddMovieToList>
+    (`https://api.themoviedb.org/3/account/${accountId}/watchlist?api_key=${environment.apiKey}&session_id=${sessionId}`,{
+      "media_type": "movie",
+      "media_id": movieId,
+      "watchlist": true
+    });
   }
 }
