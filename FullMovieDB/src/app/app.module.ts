@@ -45,8 +45,6 @@ import { CompanyDetailsBannerComponent } from './components/company-details-bann
 import { SearchedSeriesListComponent } from './components/searched-series-list/searched-series-list.component';
 import { SearchedActorsListComponent } from './components/searched-actors-list/searched-actors-list.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
