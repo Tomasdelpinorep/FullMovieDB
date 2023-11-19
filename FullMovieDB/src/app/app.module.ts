@@ -41,6 +41,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SearchedMoviesListComponent } from './components/searched-movies-list/searched-movies-list.component';
 import { CompanyDetailsPageComponent } from './ui/company-details-page/company-details-page.component';
 import { CompanyDetailsBannerComponent } from './components/company-details-banner/company-details-banner.component';
+import { SearchedSeriesListComponent } from './components/searched-series-list/searched-series-list.component';
+import { SearchedActorsListComponent } from './components/searched-actors-list/searched-actors-list.component';
 
 
 
@@ -82,7 +84,9 @@ import { CompanyDetailsBannerComponent } from './components/company-details-bann
     SearchSeriesComponent,
     SearchedMoviesListComponent,
     CompanyDetailsPageComponent,
-    CompanyDetailsBannerComponent
+    CompanyDetailsBannerComponent,
+    SearchedSeriesListComponent,
+    SearchedActorsListComponent
   ],
   
   imports: [
