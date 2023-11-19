@@ -42,6 +42,8 @@ export class AccountPageComponent implements OnInit {
         this.account = accountDetailsResp;
         this.numOfFavouriteMovies = favoriteMoviesResp.total_results;
         this.numOfWatchListMovies = watchListResp.total_results;
+        this.movieListFavourite = favoriteMoviesResp.results;
+        this.movieListWatchList = watchListResp.results;
       }
     )
   }

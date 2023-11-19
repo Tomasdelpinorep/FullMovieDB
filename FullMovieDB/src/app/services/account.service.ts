@@ -76,6 +76,7 @@ export class AccountService {
   removeMovieFromWatchList(movieId: number): Observable<AddMovieToList>{
     let accountId = sessionStorage.getItem('ACCOUNT_ID');
     let sessionId = sessionStorage.getItem('SESSION_ID');
+    console.log(accountId);
     return this.http.post<AddMovieToList>
     (`https://api.themoviedb.org/3/account/${accountId}/watchlist?api_key=${environment.apiKey}&session_id=${sessionId}`,{
       "media_type": "movie",

@@ -57,21 +57,13 @@ export class MovieDetailsBannerComponent implements OnInit {
             this.releaseDate = movieResponse.release_date;
             this.runtime = movieResponse.runtime;
 
-            for (
-              let index = 0;
-              index < favouriteResponse.results.length;
-              index++
-            ) {
+            for (let index = 0;index < favouriteResponse.results.length; index++ ) {
               if (favouriteResponse.results[index].id == this.movieId) {
                 this.favourite = true;
               }
             }
 
-            for (
-              let index = 0;
-              index < watchlistResponse.results.length;
-              index++
-            ) {
+            for (let index = 0; index < watchlistResponse.results.length; index++) {
               if (watchlistResponse.results[index].id == this.movieId) {
                 this.watchlist = true;
               }
@@ -89,15 +81,7 @@ export class MovieDetailsBannerComponent implements OnInit {
       if (resp.status_code == 1) {
         this.watchlist = true;
       } else {
-        this.accountService
-          .removeMovieFromWatchList(this.movieId)
-          .subscribe((resp) => {
-            if (resp.status_code == 13) {
-              this.watchlist = false;
-            } else {
-              this.watchlist = true;
-            }
-          });
+        this.removeFromWatchList();
       }
     });
   }
@@ -107,16 +91,48 @@ export class MovieDetailsBannerComponent implements OnInit {
       if (resp.status_code == 1) {
         this.favourite = true;
       } else {
-        this.accountService
-          .removeMovieFromFavorite(this.movieId)
-          .subscribe((resp) => {
-            if (resp.status_code == 13) {
-              this.favourite = false;
-            } else {
-              this.favourite = true;
-            }
-          });
+        this.removeFromFavorite();
       }
     });
+  }
+
+  removeFromWatchList() {
+    this.accountService
+      .removeMovieFromWatchList(this.movieId)
+      .subscribe((resp) => {
+        if (resp.status_code == 13) {
+          this.watchlist = false;
+        } else {
+          this.addToWatchList();
+        }
+      });
+  }
+
+  removeFromFavorite() {
+    this.accountService
+      .removeMovieFromFavorite(this.movieId)
+      .subscribe((resp) => {
+        if (resp.status_code == 13) {
+          this.favourite = false;
+        } else {
+          this.addToFavorite();
+        }
+      });
+  }
+
+  toggleWatchList() {
+    if (this.watchlist) {
+      this.removeFromWatchList();
+    } else {
+      this.addToWatchList();
+    }
+  }
+
+  toggleFavourite() {
+    if (this.favourite) {
+      this.removeFromFavorite();
+    } else {
+      this.addToFavorite();
+    }
   }
 }
