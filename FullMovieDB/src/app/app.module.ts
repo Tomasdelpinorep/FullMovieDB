@@ -11,6 +11,7 @@ import { UpcomingMoviesListComponent } from './components/upcoming-movies-list/u
 import { MovieItemComponent } from './components/movie-item/movie-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PopularMoviesListComponent } from './components/popular-movies-list/popular-movies-list.component';
+import { UserDetailsBannerComponent } from './components/user-details-banner/user-details-banner.component';
 import { MovieDetailsPageComponent } from './ui/movie-details-page/movie-details-page.component';
 import { ApprovedComponent } from './components/approved/approved.component';
 import { AccountPageComponent } from './ui/account-page/account-page.component';
@@ -56,6 +57,7 @@ import { SearchedActorsListComponent } from './components/searched-actors-list/s
     UpcomingMoviesListComponent,
     MovieItemComponent,
     PopularMoviesListComponent,
+    UserDetailsBannerComponent,
     MovieDetailsPageComponent,
     ApprovedComponent,
     AccountPageComponent,

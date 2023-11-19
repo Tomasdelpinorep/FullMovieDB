@@ -1,12 +1,3 @@
-@font-face {
-    font-family: 'poppins';
-    src: url(../../../fonts/Poppins-SemiBold.ttf);
-}
-
-*{
-    font-family: 'poppins';
-}
-
 h5{
     padding-left: 40px;
 }

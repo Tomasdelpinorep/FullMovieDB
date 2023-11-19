@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Movies } from 'src/app/models/movie-list.interface';
+import { Movie } from 'src/app/models/movie-list.interface';
 
 @Component({
   selector: 'app-movie-item',
@@ -8,7 +8,7 @@ import { Movies } from 'src/app/models/movie-list.interface';
 })
 export class MovieItemComponent {
 
-  @Input() movie!: Movies;
+  @Input() movie!: Movie;
   @Output() movieClick = new EventEmitter<number>;
   
   getMovieImage(){

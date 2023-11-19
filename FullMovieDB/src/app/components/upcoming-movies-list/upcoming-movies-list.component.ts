@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Movies } from 'src/app/models/movie-list.interface';
+import { Movie } from 'src/app/models/movie-list.interface';
 import { MovieService } from 'src/app/services/movie-service.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { MovieService } from 'src/app/services/movie-service.service';
 })
 export class UpcomingMoviesListComponent implements OnInit{
 
-  upcomingList: Movies[] = [];
+  upcomingList: Movie[] = [];
 
   constructor(private movieService: MovieService){}
 
