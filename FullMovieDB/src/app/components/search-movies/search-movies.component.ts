@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { Movies } from 'src/app/models/movie-list.interface';
+import { Movie } from 'src/app/models/movie-list.interface';
 import { MovieService } from 'src/app/services/movie-service.service';
 
 @Component({
@@ -9,8 +9,8 @@ import { MovieService } from 'src/app/services/movie-service.service';
 })
 export class SearchMoviesComponent {
   constructor(private movieService :MovieService){}
-  searchedMovieList :Movies[] = [];
-  @Output() sendSearchedMovieList = new EventEmitter<Movies[]>();
+  searchedMovieList :Movie[] = [];
+  @Output() sendSearchedMovieList = new EventEmitter<Movie[]>();
 
   onEnter(searchQuery :string){
     this.movieService.getMovieListWithQuery(searchQuery).subscribe(resp => {

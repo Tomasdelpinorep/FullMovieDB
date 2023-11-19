@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Movies } from 'src/app/models/movie-list.interface';
+import { Movie } from 'src/app/models/movie-list.interface';
 
 @Component({
   selector: 'app-searched-movies-list',
@@ -7,5 +7,5 @@ import { Movies } from 'src/app/models/movie-list.interface';
   styleUrls: ['./searched-movies-list.component.css']
 })
 export class SearchedMoviesListComponent {
-  @Input() searchedMovieList! :Movies[];
+  @Input() searchedMovieList! :Movie[];
 }

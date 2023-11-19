@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Movies } from 'src/app/models/movie-list.interface';
+import { Movie } from 'src/app/models/movie-list.interface';
 
 @Component({
   selector: 'app-home-page',
@@ -7,7 +7,7 @@ import { Movies } from 'src/app/models/movie-list.interface';
   styleUrls: ['./home-page.component.css'],
 })
 export class HomePageComponent {
-  searchedMovieList: Movies[] = [];
+  searchedMovieList: Movie[] = [];
 
   isSearchEmpty() {
     if (this.searchedMovieList.length == 0) return true;
