@@ -41,7 +41,11 @@ export class MovieDetailsBannerComponent implements OnInit {
     this.route.params.subscribe((params) => {
       this.movieId = Number(params['id']);
 
-      this.movieService.getFilmById(this.movieId).subscribe((resp) => {
+      if (sessionStorage.getItem('SESSION_ID') == null) {
+        this.movieService.getFilmById(this.movieId).subscribe((resp) => {
+          this.movieDetail = resp;
+        });
+      } else {
         const movieRequest = this.movieService.getFilmById(this.movieId);
         const favouriteRequest = this.accountService.getFavoriteMovies();
         const watchlistRequest = this.accountService.getWatchListMovies();
@@ -53,21 +57,30 @@ export class MovieDetailsBannerComponent implements OnInit {
             this.releaseDate = movieResponse.release_date;
             this.runtime = movieResponse.runtime;
 
-            for (let index = 0; index < favouriteResponse.results.length; index++) {
+            for (
+              let index = 0;
+              index < favouriteResponse.results.length;
+              index++
+            ) {
               if (favouriteResponse.results[index].id == this.movieId) {
                 this.favourite = true;
               }
             }
 
-            for (let index = 0; index < watchlistResponse.results.length; index++) {
+            for (
+              let index = 0;
+              index < watchlistResponse.results.length;
+              index++
+            ) {
               if (watchlistResponse.results[index].id == this.movieId) {
                 this.watchlist = true;
               }
             }
           }
         );
-        this.toEmit.emit(this.movieId);
-      });
+      }
+
+      this.toEmit.emit(this.movieId);
     });
   }
 
