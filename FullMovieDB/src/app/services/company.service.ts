@@ -10,8 +10,9 @@ export class CompanyService {
 
   constructor(private http: HttpClient) { }
 
-  getCompanyDetails(companyId: number): Observable<CompanyDetailsResponse>{
+  getCompanyById(companyId: number): Observable<CompanyDetailsResponse>{
     return this.http.get<CompanyDetailsResponse>
     (`https://api.themoviedb.org/3/company/${companyId}?api_key=02bd87fa25457bdbc212118905ab3ec0`);
   }
+
 }

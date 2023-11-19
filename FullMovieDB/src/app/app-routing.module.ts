@@ -10,6 +10,7 @@ import { MoviesPageComponent } from './ui/movies-page/movies-page.component';
 import { ActorDetailsPageComponent } from './ui/actor-details-page/actor-details-page.component';
 import { TvSeriesPageComponent } from './ui/tv-series-page/tv-series-page.component';
 import { SerieDetailsPageComponent } from './ui/serie-details-page/serie-details-page.component';
+import { CompanyDetailsPageComponent } from './ui/company-details-page/company-details-page.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path:'movies', component: MoviesPageComponent},
   {path:'actor/:id', component: ActorDetailsPageComponent},
   {path:'actors/:id', component: ActorDetailsPageComponent},
+  {path:'company/:id', component: CompanyDetailsPageComponent},
   {path:'*', component: PageNotFoundComponent},
   {path:'**', component: PageNotFoundComponent}
 ];
