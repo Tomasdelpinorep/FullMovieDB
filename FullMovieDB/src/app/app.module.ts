@@ -39,6 +39,7 @@ import { SearchActorsComponent } from './components/search-actors/search-actors.
 import { SearchSeriesComponent } from './components/search-series/search-series.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { SearchedMoviesListComponent } from './components/searched-movies-list/searched-movies-list.component';
 
 
 
@@ -73,7 +74,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
     KnownForMovieItemComponent,   
     CompanyItemComponent,
     ActorListComponent,   
-    ActorDetailsBannerComponent, CompanyListComponent, SearchMoviesComponent, SearchActorsComponent, SearchSeriesComponent,   
+    ActorDetailsBannerComponent, CompanyListComponent, SearchMoviesComponent, SearchActorsComponent, SearchSeriesComponent, SearchedMoviesListComponent,   
   ],
   
   imports: [

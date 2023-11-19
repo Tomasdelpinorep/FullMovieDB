@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { KnownForMovie } from 'src/app/models/actor-list.interface';
+import { CreditedMovie } from 'src/app/models/movie-credits.interface';
 
 @Component({
   selector: 'app-known-for-movie-item',
@@ -8,7 +9,7 @@ import { KnownForMovie } from 'src/app/models/actor-list.interface';
 })
 export class KnownForMovieItemComponent {
 
-  @Input() movie!: KnownForMovie;
+  @Input() movie!: CreditedMovie;
   
   getMovieImage(){
     return 'https://image.tmdb.org/t/p/w500/'+this.movie.poster_path;

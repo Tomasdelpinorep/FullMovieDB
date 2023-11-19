@@ -1,5 +1,6 @@
-div{
+.background{
     background-color: #343434;
+    height: 100%;
 }
 
 @font-face {

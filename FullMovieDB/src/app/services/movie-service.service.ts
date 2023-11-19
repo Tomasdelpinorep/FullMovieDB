@@ -7,6 +7,7 @@ import { ImageListResponse } from '../models/imageList';
 import { MovieDetailsResponse, ProductionCompany } from '../models/movie-details.interface';
 import { ActorListCreditsResponse } from '../models/actor-list-credits.interface';
 import { CompanyDetailsResponse } from '../models/company-details.interface';
+import { MovieCreditsListResponse } from '../models/movie-credits.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -46,9 +47,15 @@ export class MovieService {
     (`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=02bd87fa25457bdbc212118905ab3ec0`);
   }
 
-  getMovieListWithQuery(query :string){
-    return this.http.get<ActorListCreditsResponse>
-    (`https://api.themoviedb.org/3/search/movie/?query=${query}&api_key=02bd87fa25457bdbc212118905ab3ec0`);
+  getMovieListWithQuery(query :string): Observable <MovieListResponse>{
+    return this.http.get<MovieListResponse>
+    (`https://api.themoviedb.org/3/search/movie?query=${query}&api_key=02bd87fa25457bdbc212118905ab3ec0`);
+  }
+
+  getMovieCreditList(actorId:number): Observable <MovieCreditsListResponse>{
+    return this.http.get<MovieCreditsListResponse>
+    (`
+    https://api.themoviedb.org/3/person/${actorId}/movie_credits?api_key=02bd87fa25457bdbc212118905ab3ec0`);
   }
 
 }
