@@ -26,4 +26,8 @@ export class SerieService {
     (`https://api.themoviedb.org/3/tv/${id}?api_key=fba6287e1b5585e45727ead4703af755`);
   }
 
+  getSerieListWithQuery(query :string): Observable <SerieListResponse>{
+    return this.httpClient.get<SerieListResponse>
+    (`https://api.themoviedb.org/3/search/tv?query=${query}&api_key=02bd87fa25457bdbc212118905ab3ec0`);
+  }
 }

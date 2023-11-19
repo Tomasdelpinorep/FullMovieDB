@@ -12,15 +12,25 @@ export class ActorsPageComponent implements OnInit{
   page = 1;
   actorList :Actor [] = [];
   totalResults !:number;
+  searchedActorList: Actor[] = [];
 
   ngOnInit(): void {
     this.actorService.getPagedActorList(this.page).subscribe(resp => {
       this.actorList = resp.results;
-      this.totalResults = resp.total_results;
     })
   }
 
   loadNewPage(): void{
     this.actorService.getPagedActorList(this.page).subscribe(resp => {this.actorList = resp.results});
+  }
+
+  isSearchEmpty() {
+    if (this.searchedActorList.length == 0) return true;
+
+    return false;
+  }
+
+  loadSearchedList(event :any){
+    this.searchedActorList = event;
   }
 }

@@ -36,4 +36,9 @@ export class ActorService {
   getActorsBySerie(serieId: number): Observable<ActorListCreditsResponse>{
     return this.http.get<ActorListCreditsResponse>(`https://api.themoviedb.org/3/tv/${serieId}/credits?api_key=${environment.apiKey}`);
   }
+
+  getActorListWithQuery(query :string): Observable <ActorListResponse>{
+    return this.http.get<ActorListResponse>
+    (`https://api.themoviedb.org/3/search/person?query=${query}&api_key=02bd87fa25457bdbc212118905ab3ec0`);
+  }
 }

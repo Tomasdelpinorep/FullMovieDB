@@ -34,8 +34,15 @@ import { ActorDetailsBannerComponent } from './components/actor-details-banner/a
 import { KnownForListComponent } from './components/known-for-list/known-for-list.component';
 import { KnownForMovieItemComponent } from './components/known-for-movie-item/known-for-movie-item.component';
 import { CompanyListComponent } from './components/company-list/company-list.component';
+import { SearchMoviesComponent } from './components/search-movies/search-movies.component';
+import { SearchActorsComponent } from './components/search-actors/search-actors.component';
+import { SearchSeriesComponent } from './components/search-series/search-series.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SearchedMoviesListComponent } from './components/searched-movies-list/searched-movies-list.component';
 import { CompanyDetailsPageComponent } from './ui/company-details-page/company-details-page.component';
 import { CompanyDetailsBannerComponent } from './components/company-details-banner/company-details-banner.component';
+import { SearchedSeriesListComponent } from './components/searched-series-list/searched-series-list.component';
+import { SearchedActorsListComponent } from './components/searched-actors-list/searched-actors-list.component';
 
 
 
@@ -58,19 +65,28 @@ import { CompanyDetailsBannerComponent } from './components/company-details-bann
     ActorsCarouselComponent,
     ActorDetailsPageComponent,
     ActorItemComponent,
+    MovieDetailsBannerComponent,
     SerieItemComponent,
     TopRatedSeriesListComponent,
     TvSeriesPageComponent,
     SeriesOnairListComponent,
     SerieDetailsPageComponent,
-    MovieDetailsBannerComponent,
     SerieDetailsBannerComponent,
     ActorDetailsBannerComponent,
     KnownForListComponent,
     KnownForMovieItemComponent,   
     CompanyItemComponent,
     ActorListComponent,   
-    ActorDetailsBannerComponent, CompanyListComponent, CompanyDetailsPageComponent, CompanyDetailsBannerComponent,   
+    ActorDetailsBannerComponent,
+    CompanyListComponent,
+    SearchMoviesComponent,
+    SearchActorsComponent,
+    SearchSeriesComponent,
+    SearchedMoviesListComponent,
+    CompanyDetailsPageComponent,
+    CompanyDetailsBannerComponent,
+    SearchedSeriesListComponent,
+    SearchedActorsListComponent
   ],
   
   imports: [
@@ -79,7 +95,8 @@ import { CompanyDetailsBannerComponent } from './components/company-details-bann
     NgbModule,
     HttpClientModule,
     NgbModule,
-    RouterLink
+    RouterLink,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

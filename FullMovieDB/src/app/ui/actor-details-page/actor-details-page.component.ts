@@ -7,24 +7,21 @@ import { ActorService } from 'src/app/services/actors.service';
 @Component({
   selector: 'app-actor-details-page',
   templateUrl: './actor-details-page.component.html',
-  styleUrls: ['./actor-details-page.component.css']
+  styleUrls: ['./actor-details-page.component.css'],
 })
-export class ActorDetailsPageComponent implements OnInit{
-@Output() actorDetails! :ActorDetailsResponse;
-route: ActivatedRoute = inject(ActivatedRoute);
-actorId ! :number;
-popularList :Actor [] = []
+export class ActorDetailsPageComponent implements OnInit {
+  actorDetails!: ActorDetailsResponse;
+  popularList!: Actor[];
+  route: ActivatedRoute = inject(ActivatedRoute);
+  actorId!: number;
+  pageNumber!: number;
 
-constructor(private actorService: ActorService){
-  this.actorId = Number(this.route.snapshot.params['id']);
-}
+  constructor(private actorService: ActorService) {
+    this.actorId = Number(this.route.snapshot.params['id']);
+  }
   ngOnInit(): void {
-    this.actorService.getActorDetails(this.actorId).subscribe(resp => {
+    this.actorService.getActorDetails(this.actorId).subscribe((resp) => {
       this.actorDetails = resp;
-    })
-
-    this.actorService.getActorList().subscribe(resp => {
-      this.popularList = resp.results;
-    })
+    });
   }
 }

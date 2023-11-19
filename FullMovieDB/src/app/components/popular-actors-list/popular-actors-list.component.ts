@@ -11,7 +11,7 @@ export class PopularActorsListComponent implements OnInit {
   constructor(private actorService: ActorService) { }
   actorList: Actor[] = [];
   page = 1;
-  totalResults !:number;
+  totalResults !: number;
 
   ngOnInit(): void {
     this.actorService.getActorList().subscribe(resp => {
@@ -20,7 +20,8 @@ export class PopularActorsListComponent implements OnInit {
     })
   }
 
-  loadNewPage(): void {
+  loadNewPage(clickedPage: number): void {
     this.actorService.getPagedActorList(this.page).subscribe(resp => { this.actorList = resp.results });
+    this.page = clickedPage;
   }
 }
