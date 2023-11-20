@@ -16,7 +16,7 @@ export class SerieDetailsBannerComponent implements OnInit{
   genres: Genre[] = [];
   releaseDate: string = '';
   seasons: number = 0;
-
+  
   constructor(private serieService: SerieService){
     this.serieId = Number(this.route.snapshot.params['id']);
   }

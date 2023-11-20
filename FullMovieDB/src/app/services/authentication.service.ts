@@ -20,4 +20,8 @@ export class AuthenticationService {
       request_token: sessionStorage.getItem('REQUEST_TOKEN')
     });
   }
+
+  deleteSession(sessionId:string | null){
+    return this.http.delete(`https://api.themoviedb.org/3/authentication/session?api_key=${environment.apiKey}&session_id=${sessionId}`)
+  }
 }

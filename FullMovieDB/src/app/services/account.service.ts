@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { AccountDetailsResponse } from '../models/account-details.interface';
 import { environment } from 'src/environments/environment';
 import { MovieListResponse } from '../models/movie-list.interface';
+import { AddMovieToList } from '../models/addMovieToList.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -21,13 +22,87 @@ export class AccountService {
     let accountId = sessionStorage.getItem('ACCOUNT_ID');
     let sessionId = sessionStorage.getItem('SESSION_ID');
     return this.http.get<MovieListResponse>
-    (`https://api.themoviedb.org/3/account/${accountId}/watchlist/movies?api_key=${environment.apiKey}&session_id=${sessionId}`);
+    (`https://api.themoviedb.org/3/account/${accountId}/watchlist/movies?api_key=${environment.apiKey}&session_id=${sessionId}`, {
+      headers: {
+        'Authorization': `Bearer ${environment.apiKey}`
+      }
+    });
   }
 
   getFavoriteMovies(): Observable<MovieListResponse>{
     let accountId = sessionStorage.getItem('ACCOUNT_ID');
     let sessionId = sessionStorage.getItem('SESSION_ID');
     return this.http.get<MovieListResponse>
-    (`https://api.themoviedb.org/3/account/${accountId}/favorite/movies?api_key=${environment.apiKey}&session_id=${sessionId}`);
+    (`https://api.themoviedb.org/3/account/${accountId}/favorite/movies?api_key=${environment.apiKey}&session_id=${sessionId}`,{
+      headers: {
+        'Authorization': `Bearer ${environment.apiKey}`
+      }
+    });
+  }
+
+  
+  addMovieToWatchList(movieId: number): Observable<AddMovieToList>{
+    let accountId = sessionStorage.getItem('ACCOUNT_ID');
+    let sessionId = sessionStorage.getItem('SESSION_ID');
+    return this.http.post<AddMovieToList>
+    (`https://api.themoviedb.org/3/account/${accountId}/watchlist?api_key=${environment.apiKey}&session_id=${sessionId}`,{
+      "media_type": "movie",
+      "media_id": movieId,
+      "watchlist": true
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${environment.apiKey}`
+      }
+    });
+  }
+
+  addMovieToFavorite(movieId: number): Observable<AddMovieToList>{
+    let accountId = sessionStorage.getItem('ACCOUNT_ID');
+    let sessionId = sessionStorage.getItem('SESSION_ID');
+    return this.http.post<AddMovieToList>
+    (`https://api.themoviedb.org/3/account/${accountId}/favorite?api_key=${environment.apiKey}&session_id=${sessionId}`,{
+      "media_type": "movie",
+      "media_id": movieId,
+      "favorite": true
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${environment.apiKey}`
+      }
+    });
+  }
+
+  removeMovieFromWatchList(movieId: number): Observable<AddMovieToList>{
+    let accountId = sessionStorage.getItem('ACCOUNT_ID');
+    let sessionId = sessionStorage.getItem('SESSION_ID');
+    console.log(accountId);
+    return this.http.post<AddMovieToList>
+    (`https://api.themoviedb.org/3/account/${accountId}/watchlist?api_key=${environment.apiKey}&session_id=${sessionId}`,{
+      "media_type": "movie",
+      "media_id": movieId,
+      "watchlist": false
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${environment.apiKey}`
+      }
+    });
+  }
+
+  removeMovieFromFavorite(movieId: number): Observable<AddMovieToList>{
+    let accountId = sessionStorage.getItem('ACCOUNT_ID');
+    let sessionId = sessionStorage.getItem('SESSION_ID');
+    return this.http.post<AddMovieToList>
+    (`https://api.themoviedb.org/3/account/${accountId}/favorite?api_key=${environment.apiKey}&session_id=${sessionId}`,{
+      media_type: "movie",
+      media_id: movieId,
+      watchlist: false
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${environment.apiKey}`
+      }
+    })
   }
 }

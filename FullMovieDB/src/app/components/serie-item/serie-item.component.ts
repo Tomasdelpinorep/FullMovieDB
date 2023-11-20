@@ -12,6 +12,9 @@ export class SerieItemComponent {
   @Output() serieClick = new EventEmitter <number>;
 
   getSerieImage(){
+    if (this.serie.poster_path == null) {
+      return "https://cdn-icons-png.flaticon.com/512/5266/5266579.png";
+    }
     return 'https://image.tmdb.org/t/p/w500/'+this.serie.poster_path;
   }
 }
